@@ -1,7 +1,9 @@
 import React ,{useState} from "react";
+import {useNavigate} from "react-router-dom"
 
 
 const AddProduct = ()=>{
+  const navigate = useNavigate()
 
     const [name,setName] = useState("")
     const [price,setPrice] = useState("")
@@ -27,16 +29,16 @@ const AddProduct = ()=>{
         });
          result = await result.json()
          console.log(result);
-
+        navigate('/')
     }
 
 
     return (
         <>
-        <div className="flex  flex-col justify-center items-center w-full">
-        <div>
+        <div className="flex  flex-col justify-center items-center w-full h-[80vh] ">
+        <div className="">
           <h2 className="my-6 font-bold text-4xl text-blue-800">
-            User Login
+            Add Product
           </h2>
           
           {error && !name && <span className='mb-2 text-red-600'>Enter valid name</span>}

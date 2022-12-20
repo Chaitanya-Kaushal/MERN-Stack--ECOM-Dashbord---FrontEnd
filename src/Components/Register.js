@@ -35,7 +35,7 @@ navigate('/')
 
   return (
     <>
-      <div className="flex  flex-col justify-center items-center w-full">
+      <div className="flex  flex-col justify-center items-center w-full h-[80vh]">
         <div>
           <h2 className="my-6 font-bold text-4xl text-blue-800">
             User Registration
